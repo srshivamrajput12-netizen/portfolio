@@ -559,6 +559,16 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
 .phd::before{content:"";position:absolute;top:0;left:-6px;border:7px solid transparent;border-top:9px solid var(--red)}
 .phd em{position:absolute;top:1px;left:10px;transform:translateX(min(0px,calc(100vw - 100% - 60px)));font-style:normal;font-size:.6rem;color:#fff;background:var(--red);padding:0 5px;border-radius:3px;white-space:nowrap}
 @media (max-width:600px){#dock{height:66px;grid-template-columns:32px 1fr}.clip{font-size:.6rem;padding:0 5px}body{padding-bottom:76px}}
+@media (max-width:600px){
+.screen{padding:64px 18px 26px;margin:10px}
+.monitor .phead .hud,.inspector .phead .hud{display:none}
+.tcode{top:12px;right:12px;font-size:.75rem}.recb{top:12px;left:12px}
+.safe{inset:50px 4% 4%}
+.more-note{flex-wrap:wrap}
+.ruler span{display:none}.ruler span:nth-child(odd){display:block}
+.transport .hud{display:none}
+.sec-head>span.hud{font-size:.62rem;padding:0 10px;max-width:calc(100% - 36px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+}
 @media print{#dock{display:none}}
 @media (max-width:760px){.mark::after{display:none}}
 </style>
