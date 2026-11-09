@@ -1307,7 +1307,7 @@ document.querySelectorAll('.sec-head,.ally,.power,.step,.client>div').forEach((e
 
 /* ===== TIMELINE DOCK ===== */
 (()=>{
-const map=[['top','Monitor','v1','#4f8cff'],['projects','Selected work','v1','#4f8cff'],['ads','Winning ads','v2','#9b6bff'],['work','Shorts','v2','#e05bd0'],['channels','YouTube','v1','#ff0033'],['powers','Skills','v1','#4f8cff'],['ai','AI models','v2','#dafd55'],['mission','Process','v2','#f5b14c'],['intel','Brands','a1','#2fbf71'],['contact','Export','a1','#2fbf71']];
+const map=[['top','Monitor','v1','#4f8cff'],['projects','Selected work','v1','#4f8cff'],['ads','Winning ads','v2','#9b6bff'],['work','Shorts','v2','#e05bd0'],['channels','YouTube','v1','#ff0033'],['powers','Skills','v1','#4f8cff'],['ai','AI models','v2','#dafd55'],['mission','Process','v2','#f5b14c'],['packages','Packages','v1','#ffb020'],['intel','Brands','a1','#2fbf71'],['contact','Export','a1','#2fbf71']];
 const dtl=document.querySelector('.dtl'),ph=document.getElementById('playhead'),tc=document.getElementById('dockTC'),ruler=document.getElementById('ruler');
 const htc=document.getElementById('heroTC'),scrub=document.getElementById('heroScrub');
 const fmt=sec=>{const f=Math.floor((sec%1)*24),t=Math.floor(sec);return [Math.floor(t/3600),Math.floor(t/60)%60,t%60,f].map(n=>String(n).padStart(2,'0')).join(':')};
