@@ -1238,7 +1238,7 @@ document.getElementById('brief').addEventListener('submit',async e=>{e.preventDe
   if(f.elements['_honey'].value)return;
   b.disabled=true;b.textContent='Sending…';m.textContent='';
   try{
-    const r=await fetch('https://formsubmit.co/ajax/srshivamrajput12@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    const r=await fetch('https://formsubmit.co/ajax/c901f80b4b3d74157d665d5b96ae211a',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({Package:pkg,Name:name,Email:email,'Project type':f.elements['type'].value,Message:msg,_replyto:email,_subject:(pkg==='Not sure yet'?'New project brief from ':'New '+pkg.split(' –')[0]+' package brief from ')+name,_template:'table'})});
     const j=await r.json().catch(()=>({}));
     if(!r.ok||j.success===false||j.success==='false')throw 0;
