@@ -977,7 +977,7 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>Sized for Reels, Stories, Feed and YouTube</li>
           <li>Delivered in 5 days, 2 revision rounds</li>
         </ul>
-        <a class="btn ghost" href="#contact" data-pkg="Test batch ($649 launch offer)">Start a test batch</a>
+        <a class="btn ghost" href="#contact" data-pkg="Test batch – $649">Start a test batch</a>
       </article>
       <article class="pkg featured rv">
         <span class="tag">Most popular</span>
@@ -993,7 +993,7 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>72-hour turnaround on every batch</li>
           <li>Monthly call to review what's winning and plan the next batch</li>
         </ul>
-        <a class="btn" href="#contact" data-pkg="Growth ($2,400/month launch offer)">Book Growth</a>
+        <a class="btn" href="#contact" data-pkg="Growth – $2,400/month">Book Growth</a>
       </article>
       <article class="pkg rv">
         <h3>Scale</h3>
@@ -1008,7 +1008,7 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>48-hour priority turnaround</li>
           <li>Direct Slack or WhatsApp line to me</li>
         </ul>
-        <a class="btn ghost" href="#contact" data-pkg="Scale ($4,500/month launch offer)">Book Scale</a>
+        <a class="btn ghost" href="#contact" data-pkg="Scale – $4,500/month">Book Scale</a>
       </article>
     </div>
     <p class="pkg-note">Launch prices are for new clients and stay locked while your plan is active. Monthly plans are month to month, cancel anytime. Need something custom? <a href="#contact" data-pkg="Custom quote">Ask for a quote →</a></p>
@@ -1071,6 +1071,8 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
       <label for="f-name"><span class="hud">Your name</span><input id="f-name" name="name" required autocomplete="name"></label>
       <label for="f-email"><span class="hud">Your email</span><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="So I can reply to you"></label>
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <label for="f-pkg"><span class="hud">Package</span>
+        <select id="f-pkg" name="package"><option>Not sure yet</option><option>Test batch – $649</option><option>Growth – $2,400/month</option><option>Scale – $4,500/month</option><option>Custom quote</option></select></label>
       <label for="f-type"><span class="hud">Project type</span>
         <select id="f-type" name="type"><option>Ad / performance creative</option><option>SaaS explainer / product demo</option><option>Reels / Shorts</option><option>YouTube / documentary edit</option><option>Motion graphics</option><option>Other</option></select></label>
       <label for="f-msg"><span class="hud">Tell me about it</span><textarea id="f-msg" name="msg" required placeholder="Footage length, style references, deadline…"></textarea></label>
@@ -1225,19 +1227,19 @@ cb.addEventListener('click',()=>{const t=document.getElementById('email');
 
 /* Package buttons prefill the brief form */
 document.querySelectorAll('[data-pkg]').forEach(a=>a.addEventListener('click',()=>{const m=document.getElementById('f-msg'),t=document.getElementById('f-type');
+  const p=document.getElementById('f-pkg');if(p)p.value=a.dataset.pkg;
   if(t)t.value='Ad / performance creative';
-  if(m&&!m.value.trim())m.value="I'm interested in the "+a.dataset.pkg+" package. My brand: ";
   setTimeout(()=>document.getElementById('f-name')?.focus({preventScroll:true}),700)}));
 /* Brief form: sends straight to Shivam's inbox via FormSubmit */
 document.getElementById('brief').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg'),b=f.querySelector('button[type=submit]');
-  const name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim(),msg=f.elements['msg'].value.trim();
+  const pkg=f.elements['package'].value,name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim(),msg=f.elements['msg'].value.trim();
   if(!name||!msg){m.textContent='Add your name and a short description first.';return}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){m.textContent='Add a valid email so I can reply.';return}
   if(f.elements['_honey'].value)return;
   b.disabled=true;b.textContent='Sending…';m.textContent='';
   try{
     const r=await fetch('https://formsubmit.co/ajax/srshivamrajput12@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({Name:name,Email:email,'Project type':f.elements['type'].value,Message:msg,_replyto:email,_subject:'New project brief from '+name,_template:'table'})});
+      body:JSON.stringify({Package:pkg,Name:name,Email:email,'Project type':f.elements['type'].value,Message:msg,_replyto:email,_subject:(pkg==='Not sure yet'?'New project brief from ':'New '+pkg.split(' –')[0]+' package brief from ')+name,_template:'table'})});
     const j=await r.json().catch(()=>({}));
     if(!r.ok||j.success===false||j.success==='false')throw 0;
     f.reset();b.textContent='Sent ✓';m.textContent='Thanks '+name.split(' ')[0]+'! Your brief is in my inbox. I\'ll reply within 24 hours.';
