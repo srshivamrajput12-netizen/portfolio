@@ -985,6 +985,8 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
     </div>
     <form id="brief" class="rv" novalidate>
       <label for="f-name"><span class="hud">Your name</span><input id="f-name" name="name" required autocomplete="name"></label>
+      <label for="f-email"><span class="hud">Your email</span><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="So I can reply to you"></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <label for="f-type"><span class="hud">Project type</span>
         <select id="f-type" name="type"><option>Ad / performance creative</option><option>SaaS explainer / product demo</option><option>Reels / Shorts</option><option>YouTube / documentary edit</option><option>Motion graphics</option><option>Other</option></select></label>
       <label for="f-msg"><span class="hud">Tell me about it</span><textarea id="f-msg" name="msg" required placeholder="Footage length, style references, deadline…"></textarea></label>
@@ -1137,10 +1139,22 @@ cb.addEventListener('click',()=>{const t=document.getElementById('email');
   function sel(n){const r=document.createRange();r.selectNodeContents(n);const s=getSelection();s.removeAllRanges();s.addRange(r);cb.textContent='Press Ctrl+C'}
   setTimeout(()=>cb.textContent='Copy email',2200)});
 
-/* Brief form (preview only: nothing is sent from this page) */
-document.getElementById('brief').addEventListener('submit',e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg');
-  if(!f.name.value.trim()||!f.msg.value.trim()){m.textContent='Add your name and a short description first.';return}
-  m.textContent='Brief ready. Email it to the address on the left to get started.';});
+/* Brief form: sends straight to Shivam's inbox via FormSubmit */
+document.getElementById('brief').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg'),b=f.querySelector('button[type=submit]');
+  const name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim(),msg=f.elements['msg'].value.trim();
+  if(!name||!msg){m.textContent='Add your name and a short description first.';return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){m.textContent='Add a valid email so I can reply.';return}
+  if(f.elements['_honey'].value)return;
+  b.disabled=true;b.textContent='Sending…';m.textContent='';
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/srshivamrajput12@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({Name:name,Email:email,'Project type':f.elements['type'].value,Message:msg,_replyto:email,_subject:'New project brief from '+name,_template:'table'})});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||j.success===false||j.success==='false')throw 0;
+    f.reset();b.textContent='Sent ✓';m.textContent='Thanks '+name.split(' ')[0]+'! Your brief is in my inbox. I\'ll reply within 24 hours.';
+    setTimeout(()=>{b.disabled=false;b.textContent='Send brief'},4000);
+  }catch(_){b.disabled=false;b.textContent='Send brief';m.textContent='Couldn\'t send right now. Please email me at srshivamrajput12@gmail.com.'}
+});
 })();
 
 /* ===== PREMIUM MOTION LAYER ===== */
