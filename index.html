@@ -1,4 +1,23 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="description" content="Shivam Rajput: video ads editor and motion designer. 40+ winning ads for YogaBody Naturals LLC backed by nearly $500K in ad spend, 400M+ YouTube views for clients, plus explainers, reels and YouTube edits for brands in the US, Canada, UK, Switzerland, Germany and Spain.">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+.pkgs{background:linear-gradient(180deg,var(--void),var(--hull) 50%,var(--void))}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.pkg{position:relative;display:flex;flex-direction:column;gap:14px;padding:30px 26px 26px;background:var(--void);border:1px solid var(--line);border-radius:12px;transition:border-color .3s,transform .3s}
+.pkg:hover{transform:translateY(-4px);border-color:var(--core)}
+.pkg.featured{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 20px 60px -30px var(--gold)}
+.pkg .tag{position:absolute;top:-12px;left:24px;padding:4px 10px;border-radius:999px;background:var(--gold);color:#111;font-family:var(--hud);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.pkg h3{font-size:1.7rem;font-weight:800;margin:0}
+.pkg .who{margin:0;color:var(--muted);font-size:.95rem}
+.pkg .price{font-family:var(--display);font-size:2.6rem;font-weight:800;line-height:1;margin:6px 0 0}
+.pkg .price small{font-family:var(--body);font-size:.95rem;font-weight:400;color:var(--muted);margin-left:4px}
+.pkg ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1}
+.pkg li{position:relative;padding-left:24px;font-size:.96rem}
+.pkg li::before{content:"";position:absolute;left:2px;top:.45em;width:10px;height:10px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:var(--core)}
+.pkg.featured li::before{background:var(--gold)}
+.pkg .btn{justify-content:center;text-align:center;margin-top:6px}
+.pkg-note{margin:26px 0 0;color:var(--muted);font-size:.95rem;text-align:center}
+.pkg-note a{color:var(--gold)}
+@media (max-width:900px){.pkg-grid{grid-template-columns:1fr}}
+</style><meta name="description" content="Shivam Rajput: video ads editor and motion designer. 40+ winning ads for YogaBody Naturals LLC backed by nearly $500K in ad spend, 400M+ YouTube views for clients, plus explainers, reels and YouTube edits for brands in the US, Canada, UK, Switzerland, Germany and Spain.">
 <link rel="canonical" href="https://shivamxedit.in/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shivamxedit.in/">
@@ -670,6 +689,7 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
       <li><a href="#powers">Skills</a></li>
       <li><a href="#ai">AI tools</a></li>
       <li><a href="#mission">Process</a></li>
+      <li><a href="#packages">Packages</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://www.behance.net/shiivam" target="_blank" rel="noopener">Behance ↗</a></li>
     </ul>
@@ -931,6 +951,58 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
   </div>
 </section>
 
+<section class="pkgs" id="packages">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="hud">◆ Render presets · Ad packages</span>
+      <h2>Ad editing packages</h2>
+    </div>
+    <div class="pkg-grid">
+      <article class="pkg rv">
+        <h3>Test batch</h3>
+        <p class="who">Try me on one product before committing.</p>
+        <p class="price">$490<small>one-time</small></p>
+        <ul>
+          <li>5 ads (15–60s) from your footage</li>
+          <li>3 hook versions per ad = 15 creatives to test</li>
+          <li>Captions, sound design and motion graphics</li>
+          <li>Sized for Reels, Stories, Feed and YouTube</li>
+          <li>Delivered in 5 days, 2 revision rounds</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Test batch ($490)">Start a test batch</a>
+      </article>
+      <article class="pkg featured rv">
+        <span class="tag">Most popular</span>
+        <h3>Growth</h3>
+        <p class="who">A steady stream of fresh creatives for brands running Meta and TikTok ads.</p>
+        <p class="price">$1,490<small>/ month</small></p>
+        <ul>
+          <li>12 ads a month, 3 hooks each = 36 creatives</li>
+          <li>UGC-style, product demo and founder-led ads</li>
+          <li>AI B-roll and visuals where footage is missing</li>
+          <li>72-hour turnaround on every batch</li>
+          <li>Monthly call to review what's winning and plan the next batch</li>
+        </ul>
+        <a class="btn" href="#contact" data-pkg="Growth ($1,490/month)">Book Growth</a>
+      </article>
+      <article class="pkg rv">
+        <h3>Scale</h3>
+        <p class="who">For brands spending heavily on ads and testing every week.</p>
+        <p class="price">$2,490<small>/ month</small></p>
+        <ul>
+          <li>25 ads a month with unlimited hook versions</li>
+          <li>AI avatar and AI UGC ads included</li>
+          <li>Competitor ad research and new concept ideas</li>
+          <li>48-hour priority turnaround</li>
+          <li>Direct Slack or WhatsApp line to me</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Scale ($2,490/month)">Book Scale</a>
+      </article>
+    </div>
+    <p class="pkg-note">Monthly plans are month to month, cancel anytime. Need something custom? <a href="#contact" data-pkg="Custom quote">Ask for a quote →</a></p>
+  </div>
+</section>
+
 <section id="intel" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
@@ -1139,6 +1211,11 @@ cb.addEventListener('click',()=>{const t=document.getElementById('email');
   function sel(n){const r=document.createRange();r.selectNodeContents(n);const s=getSelection();s.removeAllRanges();s.addRange(r);cb.textContent='Press Ctrl+C'}
   setTimeout(()=>cb.textContent='Copy email',2200)});
 
+/* Package buttons prefill the brief form */
+document.querySelectorAll('[data-pkg]').forEach(a=>a.addEventListener('click',()=>{const m=document.getElementById('f-msg'),t=document.getElementById('f-type');
+  if(t)t.value='Ad / performance creative';
+  if(m&&!m.value.trim())m.value="I'm interested in the "+a.dataset.pkg+" package. My brand: ";
+  setTimeout(()=>document.getElementById('f-name')?.focus({preventScroll:true}),700)}));
 /* Brief form: sends straight to Shivam's inbox via FormSubmit */
 document.getElementById('brief').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg'),b=f.querySelector('button[type=submit]');
   const name=f.elements['name'].value.trim(),email=f.elements['email'].value.trim(),msg=f.elements['msg'].value.trim();
