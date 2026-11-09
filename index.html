@@ -14,6 +14,11 @@
 .pkg li::before{content:"";position:absolute;left:2px;top:.45em;width:10px;height:10px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:var(--core)}
 .pkg.featured li::before{background:var(--gold)}
 .pkg .btn{justify-content:center;text-align:center;margin-top:6px}
+.pkg .was{display:flex;align-items:center;gap:10px;margin:4px 0 -6px;font-size:.95rem;color:var(--muted)}
+.pkg .was s{text-decoration-thickness:2px;text-decoration-color:var(--red)}
+.pkg .save{padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--audio) 18%,transparent);color:var(--audio);font-family:var(--hud);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.pkg .per{margin:-4px 0 0;color:var(--muted);font-size:.9rem}
+.pkg-offer{display:inline-flex;align-items:center;gap:10px;margin:-14px 0 30px;padding:8px 14px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-family:var(--hud);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
 .pkg-note{margin:26px 0 0;color:var(--muted);font-size:.95rem;text-align:center}
 .pkg-note a{color:var(--gold)}
 @media (max-width:900px){.pkg-grid{grid-template-columns:1fr}}
@@ -957,11 +962,14 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
       <span class="hud">◆ Render presets · Ad packages</span>
       <h2>Ad editing packages</h2>
     </div>
+    <p class="pkg-offer rv">◆ Launch offer · Standard rate $250 per ad</p>
     <div class="pkg-grid">
       <article class="pkg rv">
         <h3>Test batch</h3>
         <p class="who">Try me on one product before committing.</p>
-        <p class="price">$490<small>one-time</small></p>
+        <p class="was"><s>$1,250</s><span class="save">Save 20%</span></p>
+        <p class="price">$999<small>one-time</small></p>
+        <p class="per">$200 per ad instead of $250</p>
         <ul>
           <li>5 ads (15–60s) from your footage</li>
           <li>3 hook versions per ad = 15 creatives to test</li>
@@ -969,13 +977,15 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>Sized for Reels, Stories, Feed and YouTube</li>
           <li>Delivered in 5 days, 2 revision rounds</li>
         </ul>
-        <a class="btn ghost" href="#contact" data-pkg="Test batch ($490)">Start a test batch</a>
+        <a class="btn ghost" href="#contact" data-pkg="Test batch ($999 launch offer)">Start a test batch</a>
       </article>
       <article class="pkg featured rv">
         <span class="tag">Most popular</span>
         <h3>Growth</h3>
         <p class="who">A steady stream of fresh creatives for brands running Meta and TikTok ads.</p>
-        <p class="price">$1,490<small>/ month</small></p>
+        <p class="was"><s>$3,000</s><span class="save">Save 20%</span></p>
+        <p class="price">$2,400<small>/ month</small></p>
+        <p class="per">$200 per ad instead of $250</p>
         <ul>
           <li>12 ads a month, 3 hooks each = 36 creatives</li>
           <li>UGC-style, product demo and founder-led ads</li>
@@ -983,12 +993,14 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>72-hour turnaround on every batch</li>
           <li>Monthly call to review what's winning and plan the next batch</li>
         </ul>
-        <a class="btn" href="#contact" data-pkg="Growth ($1,490/month)">Book Growth</a>
+        <a class="btn" href="#contact" data-pkg="Growth ($2,400/month launch offer)">Book Growth</a>
       </article>
       <article class="pkg rv">
         <h3>Scale</h3>
         <p class="who">For brands spending heavily on ads and testing every week.</p>
-        <p class="price">$2,490<small>/ month</small></p>
+        <p class="was"><s>$6,250</s><span class="save">Save 28%</span></p>
+        <p class="price">$4,500<small>/ month</small></p>
+        <p class="per">$180 per ad instead of $250</p>
         <ul>
           <li>25 ads a month with unlimited hook versions</li>
           <li>AI avatar and AI UGC ads included</li>
@@ -996,10 +1008,10 @@ footer .wrap{border-top:1px solid var(--line);padding-top:20px}
           <li>48-hour priority turnaround</li>
           <li>Direct Slack or WhatsApp line to me</li>
         </ul>
-        <a class="btn ghost" href="#contact" data-pkg="Scale ($2,490/month)">Book Scale</a>
+        <a class="btn ghost" href="#contact" data-pkg="Scale ($4,500/month launch offer)">Book Scale</a>
       </article>
     </div>
-    <p class="pkg-note">Monthly plans are month to month, cancel anytime. Need something custom? <a href="#contact" data-pkg="Custom quote">Ask for a quote →</a></p>
+    <p class="pkg-note">Launch prices are for new clients and stay locked while your plan is active. Monthly plans are month to month, cancel anytime. Need something custom? <a href="#contact" data-pkg="Custom quote">Ask for a quote →</a></p>
   </div>
 </section>
 
