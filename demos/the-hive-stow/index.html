@@ -2,14 +2,14 @@
 <meta name="robots" content="noindex,nofollow"><title>The Hive · website concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff7e6;--ink:#2b2118;--acc:#e2a12b;--c2:#f06b3f;--c3:#6b9f5b;--soft:#f7e2b5;--disp:'Fraunces',Georgia,serif}
+:root{--bg:#161210;--ink:#fff6e0;--acc:#f5b700;--c2:#ff7a1a;--c3:#8ac926;--soft:#2a221b;--deep:#0c0a08;--card:color-mix(in srgb,#161210 82%,#fff);--disp:'Fraunces',Georgia,serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;cursor:url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M5%2012h17v7a7%207%200%200%201-7%207h-3a7%207%200%200%201-7-7z%22%20fill%3D%22%23fff8ee%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M22%2014h3a3%203%200%200%201%200%206h-3%22%20fill%3D%22none%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M10%204c-2%202%202%203%200%206M15%203c-2%202%202%203%200%206%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%221.6%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E") 6 6, auto}
 a,button{cursor:url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M5%2012h17v7a7%207%200%200%201-7%207h-3a7%207%200%200%201-7-7z%22%20fill%3D%22%23fff8ee%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M22%2014h3a3%203%200%200%201%200%206h-3%22%20fill%3D%22none%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%222%22/%3E%3Cpath%20d%3D%22M10%204c-2%202%202%203%200%206M15%203c-2%202%202%203%200%206%22%20stroke%3D%22%235b3a29%22%20stroke-width%3D%221.6%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E") 6 6, auto}
 #fx{position:fixed;inset:0;pointer-events:none;z-index:50}
 .ribbon{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--bg);font-size:13px;padding:8px 16px;border-radius:999px;box-shadow:0 8px 30px -10px rgba(0,0,0,.4);white-space:nowrap}
 .ribbon a{color:inherit}
-header{display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,5vw,64px)}
+header{display:flex;justify-content:space-between;align-items:center;padding:112px clamp(18px,5vw,64px) 22px}
 .logo{font:700 1.5rem var(--disp);letter-spacing:.01em}
 nav a{margin-left:22px;color:inherit;text-decoration:none;font-size:15px;opacity:.8}nav a:hover{opacity:1;color:var(--acc)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px clamp(18px,5vw,64px) 80px;position:relative;overflow:hidden}
@@ -20,7 +20,7 @@ h1 span{display:inline-block;opacity:0;transform:translateY(30px);animation:up .
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .btn{display:inline-block;padding:13px 22px;border-radius:999px;background:var(--acc);color:#fff;text-decoration:none;font-weight:500;transition:transform .25s,box-shadow .25s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px -12px var(--acc)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn{color:#140c06}
 .art{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 30px 40px rgba(0,0,0,.08));animation:float 6s ease-in-out infinite}
 .steamg path{stroke-dasharray:60;animation:steam 3s ease-in-out infinite}.s2{animation-delay:.6s!important}.s3{animation-delay:1.2s!important}
 .drip{transform-origin:120px 112px;animation:drip 3.2s ease-in-out infinite}
@@ -35,19 +35,19 @@ h2{font:700 clamp(2rem,4vw,3rem)/1.1 var(--disp);margin:0 0 20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .card{background:#fff;border-radius:18px;padding:26px;border:1px solid rgba(0,0,0,.06);transition:transform .35s,box-shadow .35s}
 .card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 22px 40px -24px rgba(0,0,0,.35)}
-.card h3{font:700 1.45rem var(--disp);margin:0 0 6px;color:var(--acc)}.card p{margin:0;opacity:.8}
+.card h3{font:700 1.45rem var(--disp);margin:0 0 6px}.card p{margin:0;opacity:.8}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .ph{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(135deg,var(--soft),#fff);display:grid;place-items:center;font-size:14px;opacity:.9;border:1.5px dashed rgba(0,0,0,.15)}
 .visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--ink);color:var(--bg);border-radius:28px;margin:0 clamp(18px,5vw,64px) 90px;padding:48px}
-.visit h2{color:var(--bg)}.visit ul{list-style:none;padding:0;margin:0}.visit li{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding:10px 0}
-.visit .btn.ghost{color:var(--bg);border-color:var(--bg)}
+.visit h2{color:#fff}.visit ul{list-style:none;padding:0;margin:0}.visit li{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding:10px 0}
+.visit .btn.ghost{color:#fff;border-color:#fff}
 .rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}.rv.in{opacity:1;transform:none}
 .wx{display:inline-flex;gap:6px;margin-top:22px;background:#fff;padding:6px;border-radius:999px;border:1px solid rgba(0,0,0,.08)}
-.wx button{border:0;background:transparent;padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;color:var(--ink)}.wx button.on{background:var(--acc);color:#fff}
+.wx{background:var(--card)!important}.wx button{border:0;background:transparent;padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;color:var(--ink)}.wx button.on{background:var(--acc);color:#fff}
 body[data-wx=rain]{background:#e4ebef}body[data-wx=snow]{background:#f1f5f8}body{transition:background .8s}
 
 .blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.blobs i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(70px);opacity:.38;animation:roam 18s ease-in-out infinite alternate}
+.blobs i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(80px);opacity:.28;animation:roam 18s ease-in-out infinite alternate}
 .blobs i:nth-child(1){background:var(--acc);left:-12vmax;top:-10vmax}
 .blobs i:nth-child(2){background:var(--c2);right:-14vmax;top:20vh;animation-duration:22s}
 .blobs i:nth-child(3){background:var(--c3);left:25vw;bottom:-22vmax;animation-duration:26s}
@@ -55,12 +55,12 @@ body[data-wx=rain]{background:#e4ebef}body[data-wx=snow]{background:#f1f5f8}body
 h1 span{background:linear-gradient(100deg,var(--ink) 20%,var(--acc) 40%,var(--c2) 55%,var(--c3) 70%,var(--ink) 90%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards,shine 7s linear infinite}
 h1 span{-webkit-text-fill-color:transparent;padding-bottom:.08em}
 @keyframes shine{to{background-position:-250% 0}}
-.glow{position:fixed;width:340px;height:340px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,color-mix(in srgb,var(--c2) 35%,transparent),transparent 65%);transform:translate(-50%,-50%);transition:opacity .3s;mix-blend-mode:multiply}
-.marquee{overflow:hidden;background:linear-gradient(90deg,var(--acc),var(--c2),var(--c3),var(--acc));background-size:300% 100%;animation:shine 12s linear infinite;color:#fff;padding:16px 0;transform:rotate(-1.5deg);margin:20px -10px}
+.glow{position:fixed;width:340px;height:340px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,color-mix(in srgb,var(--c2) 35%,transparent),transparent 65%);transform:translate(-50%,-50%);transition:opacity .3s;mix-blend-mode:screen}
+.marquee{overflow:hidden;background:linear-gradient(90deg,var(--acc),var(--c2),var(--c3),var(--acc));background-size:300% 100%;animation:shine 12s linear infinite;color:#0c0a08;padding:16px 0;transform:rotate(-1.5deg);margin:20px -10px}
 .marquee div{display:flex;gap:48px;width:max-content;animation:mq 26s linear infinite;font:700 1.5rem var(--disp)}
 .marquee span::after{content:"✦";margin-left:48px;opacity:.7}
 @keyframes mq{to{transform:translateX(-50%)}}
-.card{position:relative;overflow:hidden;background:#fffffff0}
+.card{position:relative;overflow:hidden;background:var(--card);border-color:color-mix(in srgb,var(--ink) 12%,transparent)}
 .card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--cc)}
 .card .dot{width:46px;height:46px;border-radius:14px;background:var(--cc);margin-bottom:14px;display:grid;place-items:center;color:#fff;font:700 1.2rem var(--disp);transform:rotate(-8deg);transition:transform .4s}
 .card:hover .dot{transform:rotate(8deg) scale(1.1)}
@@ -68,12 +68,20 @@ h1 span{-webkit-text-fill-color:transparent;padding-bottom:.08em}
 .ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--pc1),var(--pc2));color:#fff;border:0;font-weight:500}
 .ph::after{content:"";position:absolute;inset:-50%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);animation:sweep 4s ease-in-out infinite;animation-delay:var(--d)}
 @keyframes sweep{from{transform:translateX(-60%)}to{transform:translateX(60%)}}
-.visit{background:linear-gradient(135deg,var(--ink),color-mix(in srgb,var(--acc) 55%,var(--ink)),color-mix(in srgb,var(--c3) 45%,var(--ink)));background-size:200% 200%;animation:pan 14s ease-in-out infinite alternate}
+.visit{color:#fff!important;background:linear-gradient(135deg,var(--deep),color-mix(in srgb,var(--acc) 45%,var(--deep)),color-mix(in srgb,var(--c3) 40%,var(--deep)));background-size:200% 200%;animation:pan 14s ease-in-out infinite alternate}
 @keyframes pan{to{background-position:100% 100%}}
 .btn{background:linear-gradient(120deg,var(--acc),var(--c3));background-size:200%;transition:transform .25s,box-shadow .25s,background-position .5s}.btn:hover{background-position:100%}
 .btn.ghost{background:transparent}
-.ribbon{background:linear-gradient(90deg,var(--acc),var(--c2),var(--c3));color:#fff}
+.ribbon{background:var(--deep);color:#fff;border:1px solid color-mix(in srgb,var(--acc) 60%,transparent)}
 @media (prefers-reduced-motion:reduce){.glow{display:none}}
+
+.drips{position:absolute;left:0;right:0;top:0;height:0;z-index:2;pointer-events:none}
+.drips::before{content:"";position:absolute;left:0;right:0;top:0;height:26px;background:var(--dripc)}
+.drips i{position:absolute;top:18px;width:var(--w);height:var(--h);background:var(--dripc);border-radius:0 0 999px 999px;transform-origin:top;animation:melt var(--t) ease-in-out infinite alternate}
+.drips i::after{content:"";position:absolute;bottom:-12px;left:50%;width:calc(var(--w)*.7);height:calc(var(--w)*.8);background:var(--dripc);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform:translateX(-50%);animation:fall var(--t) ease-in infinite}
+@keyframes melt{from{transform:scaleY(.55)}to{transform:scaleY(1.1)}}
+@keyframes fall{0%,70%{transform:translate(-50%,0);opacity:1}100%{transform:translate(-50%,160px);opacity:0}}
+header{position:relative;z-index:3}
 footer{text-align:center;padding:30px 20px 90px;font-size:14px;opacity:.7}
 @keyframes up{to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-14px)}}
 @keyframes steam{0%{stroke-dashoffset:60;opacity:0}40%{opacity:1}100%{stroke-dashoffset:-60;opacity:0}}
@@ -84,11 +92,11 @@ footer{text-align:center;padding:30px 20px 90px;font-size:14px;opacity:.7}
 </style></head>
 <body data-fx="honey"><div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div><div class="glow" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas>
 <div class="ribbon">Website concept for The Hive by Shivam Rajput · not the official site</div>
-<header><div class="logo">The Hive</div><nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></header>
+<div class="drips" aria-hidden="true" style="--dripc:#f5b700"><i style="left:0%;--w:14px;--h:41px;--t:2.7s"></i><i style="left:6.168662598929904%;--w:15px;--h:39px;--t:3.9s"></i><i style="left:10.953705238319245%;--w:27px;--h:27px;--t:4.5s"></i><i style="left:17.46141488766426%;--w:27px;--h:42px;--t:2.5s"></i><i style="left:24.25866862364181%;--w:34px;--h:79px;--t:5.4s"></i><i style="left:29.35327587334868%;--w:22px;--h:80px;--t:3.5s"></i><i style="left:34.89280516418521%;--w:22px;--h:70px;--t:3.2s"></i><i style="left:41.902946651865165%;--w:33px;--h:71px;--t:4.6s"></i><i style="left:47.578653372994026%;--w:17px;--h:79px;--t:4.4s"></i><i style="left:56.43181510890261%;--w:20px;--h:63px;--t:3.5s"></i><i style="left:64.50238996843889%;--w:15px;--h:45px;--t:4.0s"></i><i style="left:68.51099570987384%;--w:26px;--h:45px;--t:5.1s"></i><i style="left:76.5674597007674%;--w:23px;--h:26px;--t:3.7s"></i><i style="left:84.49439153430659%;--w:29px;--h:41px;--t:2.8s"></i><i style="left:92.6882728400706%;--w:16px;--h:76px;--t:4.8s"></i></div><header><div class="logo">The Hive</div><nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav></header>
 <main>
 <div class="hero"><div><div class="kicker">Café &amp; coffee shop on Digbeth Street · Stow-on-the-Wold</div>
 <h1><span style="animation-delay:0ms,0s">The</span> <span style="animation-delay:90ms,0s">Hive</span></h1>
-<p class="lead">Breakfast, lunch and proper coffee in the heart of Stow.</p><div class="btns"><a class="btn" href="#visit">Plan your visit</a></div></div><svg viewBox="0 0 240 220" class="art" aria-hidden="true"><g class="steamg" fill="none" stroke="#2b2118" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"><path class="s1" d="M95 70c-14-16 14-22 0-40"/><path class="s2" d="M120 66c-14-16 14-22 0-40"/><path class="s3" d="M145 70c-14-16 14-22 0-40"/></g><ellipse cx="120" cy="196" rx="92" ry="12" fill="#2b2118" opacity=".12"/><path d="M48 92h144v38a56 56 0 0 1-56 56h-32a56 56 0 0 1-56-56z" fill="#fff" stroke="#2b2118" stroke-width="5"/><path d="M192 104h14a22 22 0 0 1 0 44h-18" fill="none" stroke="#2b2118" stroke-width="5"/><path d="M48 92h144" stroke="#e2a12b" stroke-width="10"/><path class="drip" d="M120 112c0 18-6 26-6 34a6 6 0 0 0 12 0c0-8-6-16-6-34z" fill="#e2a12b"/><path d="M70 132q50 24 100 0" stroke="#e2a12b" stroke-width="5" fill="none" opacity=".5"/></svg></div>
+<p class="lead">Breakfast, lunch and proper coffee in the heart of Stow.</p><div class="btns"><a class="btn" href="#visit">Plan your visit</a></div></div><svg viewBox="0 0 240 220" class="art" aria-hidden="true"><g class="steamg" fill="none" stroke="#fff6e0" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"><path class="s1" d="M95 70c-14-16 14-22 0-40"/><path class="s2" d="M120 66c-14-16 14-22 0-40"/><path class="s3" d="M145 70c-14-16 14-22 0-40"/></g><ellipse cx="120" cy="196" rx="92" ry="12" fill="#fff6e0" opacity=".12"/><path d="M48 92h144v38a56 56 0 0 1-56 56h-32a56 56 0 0 1-56-56z" fill="#fff" stroke="#fff6e0" stroke-width="5"/><path d="M192 104h14a22 22 0 0 1 0 44h-18" fill="none" stroke="#fff6e0" stroke-width="5"/><path d="M48 92h144" stroke="#f5b700" stroke-width="10"/><path class="drip" d="M120 112c0 18-6 26-6 34a6 6 0 0 0 12 0c0-8-6-16-6-34z" fill="#f5b700"/><path d="M70 132q50 24 100 0" stroke="#f5b700" stroke-width="5" fill="none" opacity=".5"/></svg></div>
 <div class="marquee" aria-hidden="true"><div><span>Breakfast</span><span>Lunch</span><span>Coffee</span><span>Cakes</span><span>Breakfast</span><span>Lunch</span><span>Coffee</span><span>Cakes</span><span>Breakfast</span><span>Lunch</span><span>Coffee</span><span>Cakes</span><span>Breakfast</span><span>Lunch</span><span>Coffee</span><span>Cakes</span></div></div>
 <section id="about" class="about"><div class="rv"><div class="kicker">Our story</div><h2>Made with care in Stow-on-the-Wold</h2></div><p class="rv" style="--d:120ms">The Hive is a warm, rustic café on Digbeth Street serving breakfasts, delicious lunches and fresh coffee. Locals come back for the homemade baked beans and the cakes, and four-legged guests get a treat at the door.</p></section>
 <section id="menu"><div class="kicker rv">What we offer</div><h2 class="rv">From our kitchen</h2><div class="grid"><article class="card rv tilt" style="--cc:var(--acc);--d:0ms"><div class="dot">1</div><h3>Breakfast</h3><p>The full works or something lighter</p></article><article class="card rv tilt" style="--cc:var(--c2);--d:90ms"><div class="dot">2</div><h3>Lunch</h3><p>Seasonal, homemade plates</p></article><article class="card rv tilt" style="--cc:var(--c3);--d:180ms"><div class="dot">3</div><h3>Coffee</h3><p>Freshly made, all day</p></article><article class="card rv tilt" style="--cc:var(--acc);--d:270ms"><div class="dot">4</div><h3>Cakes</h3><p>Outstanding, say the regulars</p></article></div></section>
@@ -107,12 +115,19 @@ const R=(a,b)=>a+Math.random()*(b-a);
 const COL={steam:'255,255,255',cream:'255,248,232',honey:'226,161,43',jam:'194,85,122',flour:'255,255,255',crystal:'',sparkle:'',petals:'',weather:''};
 function spawn(x,y,trail){
   const p={col:PAL[Math.floor(Math.random()*3)],x,y,vx:R(-.4,.4),vy:R(-1.2,-.3),life:1,s:R(3,9),r:R(0,6.28),vr:R(-.05,.05),h:R(0,360),t:trail};
-  if(fx==='honey'||fx==='jam'){p.vy=R(.4,1.4);p.vx=R(-.2,.2);p.s=R(3,7)}
+  if(fx==='honey'||fx==='jam'||fx==='chocolate'){p.vy=R(.6,1.8);p.vx=R(-.2,.2);p.s=R(3,7);p.hex=fx==='honey'&&Math.random()<.4}
+  if(fx==='paws'){p.vx=0;p.vy=0;p.vr=0;p.s=9;p.r=p.ang||0}
+  if(fx==='ripple'){p.vx=0;p.vy=0;p.vr=0;p.s=p.big?6:3;p.max=p.big?90:34}
   if(fx==='petals'){p.vy=R(.5,1.4);p.vx=R(-.6,.6);p.s=R(6,11)}
   if(fx==='flour'){p.vy=R(-.6,.4);p.vx=R(-.8,.8);p.s=R(1.5,4)}
   if(fx==='weather'){p.vy=mode==='rain'?R(6,9):mode==='snow'?R(.6,1.6):R(-.2,.2);p.vx=mode==='rain'?-1.2:R(-.5,.5);p.s=mode==='rain'?R(8,14):R(2,5)}
   P.push(p)}
-addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;if(!reduce)for(let i=0;i<2;i++)spawn(mx+R(-4,4),my+R(-4,4),1)});
+let lx=0,ly=0,step=0,rip=0;
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;if(reduce)return;
+  if(fx==='paws'){const dx=mx-lx,dy=my-ly;if(Math.hypot(dx,dy)>42){const a=Math.atan2(dy,dx)+Math.PI/2;step^=1;const o=step?9:-9;spawn(mx+Math.cos(a-Math.PI/2+Math.PI/2)*o,my+Math.sin(a)*o,1);P[P.length-1].r=a;lx=mx;ly=my}return}
+  if(fx==='ripple'){if(++rip%5===0)spawn(mx,my,1);if(Math.random()<.5)spawn(mx+R(-4,4),my+R(-4,4),1),P[P.length-1].flour=1;return}
+  for(let i=0;i<2;i++)spawn(mx+R(-4,4),my+R(-4,4),1)});
+addEventListener('pointerdown',e=>{if(fx==='ripple'&&!reduce){for(let i=0;i<3;i++){P.push({x:e.clientX,y:e.clientY,vx:0,vy:0,vr:0,r:0,life:1+i*.25,s:6+i*10,max:120,t:1,big:1,col:PAL[i%3]})}}});
 function ambient(){
   if(fx==='petals'&&Math.random()<.15)spawn(R(0,W),-10,0);
   if(fx==='weather'&&mode!=='sun'&&Math.random()<(mode==='rain'?.9:.3))spawn(R(0,W+80),-10,0);
@@ -123,6 +138,10 @@ function draw(p){
   const a=Math.max(0,p.life);c.save();c.translate(p.x,p.y);c.rotate(p.r);
   if(fx==='steam'||fx==='cream'){c.globalAlpha=a*.5;c.fillStyle=p.t&&Math.random()<2?p.col:'#fff';c.beginPath();c.arc(0,0,p.s*(1.6-a),0,7);c.fill()}
   else if(fx==='honey'||fx==='jam'){c.globalAlpha=a;c.fillStyle=p.col;c.beginPath();c.moveTo(0,-p.s);c.bezierCurveTo(p.s,0,p.s,p.s,0,p.s*1.2);c.bezierCurveTo(-p.s,p.s,-p.s,0,0,-p.s);c.fill()}
+  else if(fx==='chocolate'){c.globalAlpha=a;c.fillStyle=p.col;c.beginPath();c.moveTo(0,-p.s);c.bezierCurveTo(p.s,0,p.s,p.s,0,p.s*1.2);c.bezierCurveTo(-p.s,p.s,-p.s,0,0,-p.s);c.fill()}
+  else if(fx==='honey'&&p.hex){c.globalAlpha=a;c.strokeStyle=p.col;c.lineWidth=2;c.beginPath();for(let i=0;i<6;i++){c.lineTo(Math.cos(i*1.047)*p.s*1.6,Math.sin(i*1.047)*p.s*1.6)}c.closePath();c.stroke()}
+  else if(fx==='paws'){c.globalAlpha=a*.85;c.fillStyle=p.col;c.beginPath();c.ellipse(0,4,6,5,0,0,7);c.fill();[[-6,-4],[-2,-8],[2,-8],[6,-4]].forEach(([x,y])=>{c.beginPath();c.arc(x,y,2.4,0,7);c.fill()})}
+  else if(fx==='ripple'){if(p.flour){c.globalAlpha=a*.8;c.fillStyle='#fff';c.beginPath();c.arc(0,0,1.8,0,7);c.fill()}else{const rr=p.s+(1-a)*p.max;c.globalAlpha=Math.max(0,a)*.7;c.strokeStyle=p.col;c.lineWidth=2;c.beginPath();c.arc(0,0,rr,0,7);c.stroke()}}
   else if(fx==='flour'){c.globalAlpha=a*.85;c.fillStyle=p.t?p.col:'#fff';c.beginPath();c.arc(0,0,p.s,0,7);c.fill()}
   else if(fx==='petals'){c.fillStyle=`hsla(${340+p.h%30},70%,82%,${a})`;c.beginPath();c.ellipse(0,0,p.s,p.s*.55,0,0,7);c.fill()}
   else if(fx==='crystal'){c.fillStyle=`hsla(${p.h},70%,75%,${a*.85})`;c.beginPath();c.moveTo(0,-p.s);c.lineTo(p.s*.6,0);c.lineTo(0,p.s);c.lineTo(-p.s*.6,0);c.fill()}
@@ -130,7 +149,7 @@ function draw(p){
   else if(fx==='weather'){if(mode==='rain'){c.strokeStyle=`rgba(80,130,170,${a*.6})`;c.lineWidth=1.4;c.rotate(-p.r+.15);c.beginPath();c.moveTo(0,0);c.lineTo(0,p.s);c.stroke()}else if(mode==='snow'){c.fillStyle=`rgba(255,255,255,${a})`;c.beginPath();c.arc(0,0,p.s,0,7);c.fill()}else{c.fillStyle=`rgba(242,201,76,${a*.8})`;c.beginPath();c.arc(0,0,p.s*.8,0,7);c.fill()}}
   c.restore()}
 function loop(){c.clearRect(0,0,W,H);if(!reduce)ambient();
-  for(const p of P){p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life-=p.t?.018:(fx==='weather'||fx==='petals'?.003:.006);
+  for(const p of P){p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life-=fx==='paws'?.007:fx==='ripple'?(p.big?.012:.025):p.t?.018:(fx==='weather'||fx==='petals'?.003:.006);
     if(fx==='steam'||fx==='cream'){p.vx+=Math.sin(p.y/18)*.02}
     if(fx==='petals'){p.vx+=Math.sin(p.y/40)*.03}
     draw(p)}
